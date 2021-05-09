@@ -1,0 +1,58 @@
+.banner{
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+     url('https://themebeyond.com/html/movflx/img/banner/banner_bg01.jpg');
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.banner-items{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    transform: translateY(-10%,-45%);
+    width: 600px;
+}
+
+.banner-items h1{
+    color: #fff;
+    text-transform: capitalize;
+    font-family: "Playfair Display", serif;  
+   font-size: 52px;
+   font-weight: 700;
+   letter-spacing: 1px;
+}
+.banner-items h2{
+   color: #e4d804;
+   text-transform: capitalize;
+   letter-spacing: 2px;
+   font-size: 40px;
+   font-weight: 900;
+   font-family: "Playfair Display", serif; 
+}
+.banner-btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.banner-btn button{
+    background-color: transparent;
+    height: 50px;
+    line-height: 20px;
+    width: 170px;
+    text-transform: capitalize;
+    font-size: 19px;
+    border: 2px solid #e4d804;
+    border-radius: 25px;
+    transition: all ease-in-out .5s;
+}
+.banner-btn button:hover{
+    border: none;
+    background-color: #e4d804;
+    color: #000;
+    font-weight: 500;
+    transition: all ease-in-out .4s;
+}

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Link } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 import { Container } from '../../globalStyle';
 
 export const Nav = styled.nav`
@@ -94,6 +94,11 @@ export const NavLinks = styled(Link)`
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+  &:hover {
+    color: #fd9d3e;
+    transition: all 0.3s ease;
+    text-decoration:none;
+  }
   @media screen and (max-width: 960px) {
     text-align: center;
     padding: 2rem;

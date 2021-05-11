@@ -47,8 +47,8 @@ const Menu = () => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/products' onClick={closeMobileMenu}>
-                  Products
+                <NavLinks to='/blog' onClick={closeMobileMenu}>
+                  blogs
                 </NavLinks>
               </NavItem>
               

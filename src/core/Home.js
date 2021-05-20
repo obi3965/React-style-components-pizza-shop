@@ -33,6 +33,7 @@ const Home = () => {
 
     const filteredData = menu.filter(item => item.category ===  button);
     setMenuItem(filteredData)
+    setButtons(buttons)
   }
 
  

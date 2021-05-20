@@ -41,6 +41,7 @@ const pageCount = Math.ceil(blogList.length / blogPerPage);
 
 const changePage = ({ selected }) => {
   setPageNumber(selected);
+  setBlogList(blogList)
 };
   return(
   <>

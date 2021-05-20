@@ -7,8 +7,8 @@ import {BannerItem, BannerLink, BannerH1, BannerContent
 const MenuBanner = () => {
   return(
     <BannerItem>
-     <BannerContent>
-         <BannerH1>FOOD MENUS</BannerH1>
+     <BannerContent >
+         <BannerH1 data-aos='fade-up'>FOOD MENUS</BannerH1>
          <BannerLink to='/'>home</BannerLink>
      </BannerContent>
    </BannerItem>

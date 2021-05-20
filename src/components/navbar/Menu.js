@@ -5,7 +5,7 @@ import {
   Nav,
   NavbarContainer,
   NavLogo,
-  
+  Image,
   MobileIcon,
   NavMenu,
   NavItem,
@@ -30,7 +30,7 @@ const Menu = () => {
           <NavbarContainer>
             <NavLogo to='/' onClick={closeMobileMenu}>
               
-              <img style={{width:'120px', height:'40px'}} src="../image/pizza-logo.png" alt=""/>
+              <Image src="../image/pizza-logo.png" alt=""/>
             </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}

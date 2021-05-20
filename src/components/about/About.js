@@ -1,9 +1,18 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {AboutBox, AboutImage, AboutItem, AboutName, 
     AboutTitle, AboutText, AboutImg} from './AboutStyle'
-
+import AOS from 'aos'
 
 const About = () => {
+
+ useEffect(() => {
+   AOS.init({
+     duration:2000,
+     easing:'ease',
+     debounceDelay:50
+   })
+ }, [])
+
     const aboutData = [
         {
             
@@ -18,13 +27,13 @@ const About = () => {
     <AboutBox>
       {aboutData.map(item => {
          return <>
-          <AboutItem>
+          <AboutItem data-aos='fade-up'>
           <AboutName>{item.name}</AboutName>
           <AboutTitle>{item.title}</AboutTitle>
           <AboutText>{item.text}</AboutText>  
           </AboutItem>
           
-          <AboutImage>
+          <AboutImage data-aos='fade-up'>
               <AboutImg src={item.image} />
           </AboutImage>
         </>

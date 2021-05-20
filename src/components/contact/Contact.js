@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import emailjs from 'emailjs-com'
 import {Container, Label, Input, Button, Form, Textarea,
 ContactBox,ContactH1,ContactH2,ContactP,
 ContactNum} from './ContactStyle'
+import AOS from 'aos'
+
+
 
 const Contact = () => {
 
+
+    useEffect(() => {
+       AOS.init({
+           duration:2000,
+           easing:'ease',
+           debounceDelay:50,
+       }) 
+    }, []);
     function sendEmail(e) {
         e.preventDefault();
     
@@ -20,7 +31,7 @@ const Contact = () => {
   return(
     <Container>
 
-<ContactBox>
+<ContactBox data-aos='fade-up'>
      <ContactH2>
      Fresh From Pizzon
      </ContactH2>
@@ -35,7 +46,8 @@ const Contact = () => {
          
      </ContactNum>
     </ContactBox>
-    <Form onSubmit={sendEmail}>
+
+    <Form onSubmit={sendEmail} data-aos='fade-up'>
    
       <Label>Name</Label>
       <Input type="text" name="name" />

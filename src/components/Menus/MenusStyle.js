@@ -20,17 +20,49 @@ export const ItemContainer = styled.div`
  align-items:center;
  flex-direction:column;
  margin-top:20px;
+ @media(min-width:280px) and (max-width:319px){
+  width:90%;
+  margin:auto;
+}
+@media(min-width:320px) and (max-width:767px){
+  width:90%;
+  margin:auto;
+}
+@media(min-width:768px) and (max-width:1023px){
+  width:280px;
+  margin:auto;
+  
+}
 `
 
 export const ItemImage = styled.img`
 width:200px;
+@media(min-width:280px) and (max-width:319px){
+  width:120px;
+}
+@media(min-width:320px) and (max-width:767px){
+  width:130px;
+  
+}
+@media(min-width:768px) and (max-width:1023px){
+  width:150px;
+  margin:auto;
+}
 `
 
 export const ItemH2 = styled.h2`
 color:#fff;
 font-size:20px;
 margin-top:15px;
-
+@media(min-width:280px) and (max-width:319px){
+  font-size:16px;
+}
+@media(min-width:320px) and (max-width:767px){
+  font-size:17px;
+}
+@media(min-width:768px) and (max-width:1023px){
+  font-size:17px;
+}
 `
 
 export const ItemDesc = styled.p`
@@ -39,6 +71,10 @@ font-size:16px;
 margin-top:15px;
 text-align:center;
 opacity:.75;
+@media(min-width:280px) and (max-width:319px){
+  font-size:14px;
+  margin-top:8px;
+}
 `
 
 
@@ -57,6 +93,9 @@ color:#fd9d3e;
 font-family: 'Pacifico', cursive;
 padding-top:20px;
 font-size:30px;
+@media(min-width:280px) and (max-width:319px){
+  font-size:19px;
+}
 `
 
 export const TabH1 = styled.h1`
@@ -66,4 +105,9 @@ text-transform:uppercase;
 font-size:35px;
 font-family: "Playfair Display", serif; 
 font-weight:700;
+@media(min-width:280px) and (max-width:319px){
+  font-size:20px;
+  text-align:center;
+  letter-spacing:1px;
+}
 `

@@ -1,6 +1,10 @@
-import React from 'react'
+import React,{ useEffect} from 'react'
 import Carousel from "react-elastic-carousel";
-import {Slide, Item, ItemH2, ItemP, Image} from './ChefStyle'
+import {Slide, Item, ItemH2, ItemP, 
+  Image, ChefH1} from './ChefStyle'
+import '../../styles/nav.css'
+import AOS from 'aos'
+
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -11,14 +15,25 @@ const breakPoints = [
 
 
 const Chef = ({data}) => {
+
+  useEffect(() => {
+    AOS.init({
+      duration:2000,
+      easing:'ease',
+      debounceDelay:50
+    })
+  }, []);
+
+
   return(
     <>
-    <h1 style={{ textAlign: "center" }}>Example to setup your carousel in react</h1>
+    <ChefH1>our chefs</ChefH1>
       <Slide>
+        
         <Carousel enableAutoPlay autoPlaySpeed={2000} breakPoints={breakPoints}>
           {data.map((elem, i) => (
              
-                <Item key={i}>
+                <Item key={i} data-aos='fade-up'>
                  <Image src={elem.image}/>
                  <ItemH2>{elem.name}</ItemH2>
                  <ItemP>{elem.job}</ItemP>
@@ -28,6 +43,7 @@ const Chef = ({data}) => {
           
           
         </Carousel>
+        
       </Slide>
     
     </>

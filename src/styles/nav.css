@@ -8,8 +8,35 @@
    left: 0;
    z-index: 999;
 }
+/* square buttons */
+.rec.rec-arrow {
+  border-radius: 0;
+  background-color: #000 !important;
+  height: 52px;
+  margin-top: -40px;
+  
+}
+/* round buttons on hover */
+.rec.rec-arrow:hover {
+  border-radius: 50%;
+}
+.rec.rec-dot.rec-dot_active{
+  background-color: #000 !important;
+
+}
 
 
+
+ .rec-arrow-left{
+  color:#fff !important;
+  font-size: 50px !important;
+  
+}
+.rec-arrow-right{
+  color:#fff !important;
+  font-size: 52px !important;
+  
+}
 
 .underline1{
     border-bottom: 2px solid #e60c2d;

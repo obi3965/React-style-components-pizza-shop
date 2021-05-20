@@ -1,15 +1,25 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {ListItem,Name,Ing1,Ing2,Ing3,
     Image,Desc, Item1, CartLink, Cart} from './MenuBannerStyle'
-
+import AOS from 'aos'
 
 const List = ({menuList}) => {
+
+  
+useEffect(() => {
+  AOS.init({
+    duration:2000,
+    easing:'ease',
+    debounceDelay:50
+  })
+}, []);
+  
   return(   
     <ListItem>
     {menuList.map((data)=>{
         return(
        <>
-        <Item1>
+        <Item1 data-aos='fade-up'>
           <Image src={data.image}></Image>  
         
 

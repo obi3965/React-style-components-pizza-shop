@@ -22,24 +22,10 @@ const Banner = () => {
   return(
   
   <>
-    {/* <div className="banner">
-     <div className="banner-items" data-aos="fade-right">
-         <h2>Movflx</h2>
-         <h1>Unlimited Movie, TVs Shows, and More.</h1>
-         <div className="banner-btn" data-aos="fade-up">
-             <Link to="/movies">
-             <button className="btn btn-danger">see movies</button>
-             </Link>
-         </div>
-     </div>
-
-      
-
-   
-    </div> */}
+    
 
     <BannerContainer>
-      <BannerItem data-aos="fade-right">
+      <BannerItem data-aos="fade-up">
       <BannerH2>pizzon</BannerH2>
       <BannerH1>quality foods for healthy body.</BannerH1>
       <BannerButton>

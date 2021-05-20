@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {
    BlogBox, BlogItems, 
    BlogH1,BlogContainer,
@@ -8,6 +8,8 @@ import {
 
   import {blogs }from '../data/data'
   import ReactPaginate from 'react-paginate'
+  import AOS from 'aos'
+
 
 const Blogs = () => {
 
@@ -16,11 +18,18 @@ const Blogs = () => {
   const blogPerPage = 3;
   const pagesVisited = blogPerPage * pageNumber
 
+  useEffect(() => {
+    AOS.init({
+      duration:2000,
+      easing:'ease',
+      debounceDelay:50
+    })
+  }, []);
 
 const displayBlogs = blogList.slice(pagesVisited, pagesVisited + blogPerPage)
 .map(blog => {
   return(
-    <BlogDiv>
+    <BlogDiv data-aos='fade-up'>
     <Image src={blog.image}/>
     <BlogName>{blog.name}</BlogName>
     <BlogDesc>{blog.desc}</BlogDesc>
@@ -36,8 +45,8 @@ const changePage = ({ selected }) => {
   return(
   <>
     <BlogBox>
-    <BlogItems>
-      <BlogH1>blog</BlogH1>
+    <BlogItems >
+      <BlogH1 data-aos='fade-up'>blog</BlogH1>
     </BlogItems>
     </BlogBox>
 
